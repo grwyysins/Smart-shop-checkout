@@ -84,10 +84,10 @@ def view_basket():
     print("\n========== YOUR BASKET ==========")
 
     for code, quantity in basket.items():
+        product=products[code]
+        print(f"{product['name']}*{quantity}")
 
-        product = products[code]
 
-        line_total = product["price"] * quantity
 
     subtotal, discount, total = calculate_totals()
 
